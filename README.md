@@ -1,5 +1,4 @@
 # labloot-reader
-Read and display voltage data from Labloot multimeter
 ![demo](demo.png)
 
 ## Installation
@@ -11,7 +10,7 @@ python3 server.py
 ```
 This should start the server listening on port 8000
 
-Navigate to http://<IP>:8000
+Navigate to http://127.0.0.1:8000
 
 
 ## Labloot instructions
