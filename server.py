@@ -10,6 +10,8 @@ PARITY = serial.PARITY_NONE
 STOP_BITS = serial.STOPBITS_ONE
 DATA_BITS = serial.EIGHTBITS
 TIMEOUT = 2
+
+# Server settins
 HOST = "0.0.0.0"
 PORT = 8000
 
