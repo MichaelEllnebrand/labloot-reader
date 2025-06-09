@@ -5,7 +5,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 # Edit these parameters as needed for your multimeter
 SERIAL_PORT = "/dev/ttyUSB0"
-BAUD_RATE = 9600
+BAUD_RATE = 115200
 PARITY = serial.PARITY_NONE
 STOP_BITS = serial.STOPBITS_ONE
 DATA_BITS = serial.EIGHTBITS
