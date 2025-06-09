@@ -2,7 +2,7 @@
 ![demo](demo.png)
 
 ## Installation
-Quick-start
+### Quick-start
 ```
 apt-get install python3-serial
 git clone https://github.com/gbyx3/labloot-reader.git
