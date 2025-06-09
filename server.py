@@ -134,7 +134,6 @@ class VoltageHandler(BaseHTTPRequestHandler):
             voltage = read_and_convert_multimeter(self.ser)
             self.send_response(200)
             self.send_header("Content-type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             if voltage is not None:
                 response = {"voltage": f"{voltage:.6f} V"}
