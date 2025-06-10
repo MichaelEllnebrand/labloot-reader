@@ -1,7 +1,7 @@
-import serial
 import time
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
+import serial
 
 # Edit these parameters as needed for your multimeter
 SERIAL_PORT = "/dev/ttyUSB0"
@@ -128,7 +128,7 @@ class VoltageHandler(BaseHTTPRequestHandler):
         self.ser = ser
         super().__init__(*args, **kwargs)
 
-    def do_GET(self):
+    def do_GET(self): # pylint:disable=invalid-name
         print(f"Received request for path: {self.path}")
         if self.path == "/voltage":
             voltage = read_and_convert_multimeter(self.ser)
@@ -172,7 +172,12 @@ def run_server(ser):
             print("Serial connection closed")
 
 
-if __name__ == "__main__":
+def main():
     ser = initialize_serial()
     if ser:
         run_server(ser)
+    else:
+        print("Failed to initialize serial connection. Exiting.")
+
+if __name__ == "__main__":
+    main()
